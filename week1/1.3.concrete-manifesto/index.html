@@ -14,8 +14,34 @@
 </head>
 <body>
 
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
-
+    <h1>re-think</h1>
+    <p>re-imagine</p>
+    <p>re-purpose</p>
+    <p>re-connect</p>
+    <p>re-engineer</p>
+    <p>re-model</p>
+    <p>re-made</p>
+    <script type="text/javascript">
+        let g = document.getElementById("grow");
+        
+        // set the font-size property in JavaScript
+        g.style.fontSize = "100%";
+        
+        // add a function to the onclick event
+        g.onclick = function(){
+        
+             // determine current font size and convert it to an integer
+             let fs = Number(this.style.fontSize.replace("%",""));
+        
+             // make sure it worked
+             console.log(fs);
+        
+             // change the color of the clicked element 
+             this.style.color = "red";
+        
+             // change the font size to increase it by 10%
+             this.style.fontSize = fs * 1.1 + "%";
+        };
+        </script>
 </body>
 </html> 
