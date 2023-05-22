@@ -10,17 +10,124 @@
     <!--
         Use this page to complete the "Self Portrait" project:
         https://canvas.umw.edu/courses/1446087/assignments/10969658
+
+        This is my (Anna Hollrah) interpertation of a self portrait which includes
+        one image that represents the different roles of my life with my glooves
+
+        The 2nd and 3rd image represents data of my life in 2 days of the different floors
+        or ground that I walked across during my day
+
+        The 3rd image is my personal iconic history starting in February 2023
     -->  
 
     <style type="text/css">
+        body {
+            line-height: 2em;
+        }   
+        section {
+            width: 90%;
+		    margin: auto;
+		    padding: 20px;
+        }
+        div {
+            margin-left: 1rem;
+            margin-top: 1rem;
+            position: relative;
+        }
+        p {
+            text-align:center;
+        }
+        p .magazine1 {
+            background-color:midnightblue;
+            color:cornflowerblue;
+            font-family:Georgia;
+            font: weight 5000px;
+            font-size: x-large;
+            text-transform: uppercase;
+            padding: 5px
+        }
+        p .magazine2 {
+            background-color:indigo;
+            color:mediumpurple;
+            font-family: 'Lucida Sans';
+            font-weight: 10000px;
+            font-size:xx-large;
+            text-transform: uppercase;
+            padding: 5px
+        }
+        p .newspaper {
+            background-color:darkcyan;
+            color:cornsilk;
+            font-family:'Trebuchet MS';
+            font-weight: 1000px;
+            font-size:xx-large;
+            text-transform:lowercase;
+            padding: 5px
+        } 
+        p .rotateleft {
+            transform: rotate(-5deg);
+            display: inline-block;
+        } 
+        p .rotateright {
+            transform: rotate(5deg);
+            display: inline-block;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
 
+        .column {
+            width: 33.33%;
+            padding: 5px;
+        }
 
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
 
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
     </style>
 
 </head>
 <body>
+    <div style="display: inline-block;">
+
+    
+    <p> 
+        <span class="magazine1 rotateleft">Life</span>
+        <span class="newspaper rotateright">is</span>
+        <span class="newspaper rotateright">A</span>
+        <span class="magazine2 rotateleft">Journey</span>
+    </p>    
 
 
+        <div class="row">
+            <div class="column">
+                <img src="c:\Users\abarton\Desktop\AM Classes\DGST 302\Week 1\IMG_1476.JPEG" alt="Roles of Life" width="600" height="400">
+                <div class="center" >Self Portrait</div>
+            </div>
+
+            <div class="column">
+                <img src="c:\Users\abarton\Desktop\AM Classes\DGST 302\Week 1\1.png" alt="Day 1 Floors" width="600" height="400">
+                <div class="center">Day 1 Floors</div>
+            </div>
+          
+            <div class="column">
+                <img src="c:\Users\abarton\Desktop\AM Classes\DGST 302\Week 1\2.png" alt="Day 2 Floors" width="600" height="400">
+                <div class="center">Day 2 Floors</div>
+            </div>
+          
+            <div class="column">
+                <img src="c:\Users\abarton\Desktop\AM Classes\DGST 302\Week 1\Iconic History.png" alt="Iconic History" width="600" height="400">
+                <div class="center">Iconic History</div>
+            </div>
+        </div>    
+    </div>
 </body>
 </html> 
