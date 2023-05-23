@@ -6,6 +6,7 @@ function draw() {
   background(220);
 
   fill(175, 10, 255);
+  stroke(255, 50, 100);
 
 //left half of heart
   translate(50,25)
