@@ -8,6 +8,7 @@ function draw() {
   fill(175, 10, 255);
 
 //left half of heart
+  translate(50,25)
   beginShape();
   curveVertex(150, 400);
   curveVertex(150, 270);
@@ -18,6 +19,7 @@ function draw() {
   endShape();
 
 //right half of heart
+  translate(0,0)
   beginShape();
   curveVertex(150, 300);
   curveVertex(150, 120);
