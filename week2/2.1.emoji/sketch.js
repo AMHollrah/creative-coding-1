@@ -3,30 +3,28 @@ function setup() {
 }
 
 function draw() {
-  Background(220);
-  size(300, 300);
+  background(220);
 
-  fill(255, 0, 0); 
+  fill(175, 10, 255);
 
 //left half of heart
   beginShape();
-  curveVertex(150, 600);
+  curveVertex(150, 400);
   curveVertex(150, 270);
   curveVertex(50, 150);
-  curveVertex(75, 75);
-  curveVertex(150, 100);
+  curveVertex(78, 87);
+  curveVertex(150, 120);
   curveVertex(150, 300);
   endShape();
 
 //right half of heart
   beginShape();
   curveVertex(150, 300);
-  curveVertex(150, 100);
-  curveVertex(220, 75);
+  curveVertex(150, 120);
+  curveVertex(220, 87);
   curveVertex(250, 150);
   curveVertex(150, 270);
-  curveVertex(150, 600);
+  curveVertex(150, 400);
   endShape();
  
-
 }
