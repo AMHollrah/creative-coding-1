@@ -29,7 +29,7 @@ function draw() {
       push();
       translate(x * 100, y * 100);
       
-        if (x == 0,8) {
+        if (x % 1 == 0) {
           fill(0, 150, 150);
         } else {
           fill(120, 50, 100);
