@@ -9,7 +9,7 @@ let y = 0;
 
 function preload() {
   rose = img = loadImage('https://amhollrah.github.io/creative-coding-1/week3/3.2.follower/Rose.jpg');
-  
+}
 
 function setup() {
   createCanvas(600, 480);
