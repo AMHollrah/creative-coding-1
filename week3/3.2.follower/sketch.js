@@ -1,4 +1,10 @@
-function setup() {
+let rose;
+
+function preload() {
+  rose = img = loadImage('');
+  
+
+  function setup() {
   createCanvas(400, 400);
 }
 
