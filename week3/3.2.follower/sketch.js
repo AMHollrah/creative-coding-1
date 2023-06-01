@@ -1,13 +1,12 @@
 let debug = true;
-let score;
 let d = 0;
-
+let score = 0;
 let Corgi;
 let NightSpace;
 
 let speedfactor = 3;
-let xspeed = speedfactor;
-let yspeed = speedfactor;
+let speedx = speedfactor;
+let speedy = speedfactor;
 
 let x = 0; 
 let y = 0;
@@ -24,7 +23,6 @@ function setup() {
 
 function draw() {
   background(NightSpace);
-
   image(Corgi, mouseX-50, mouseY-80, 100, 160);
 
    
@@ -46,12 +44,12 @@ function draw() {
    speedx = -speedfactor;
     }
 
- if (mouseY > y){
+    if (mouseY > y){
    //move to the right
-   speedy = speedfactor;
+      speedy = speedfactor;
   }else{
    //move to the left
-   speedy = -speedfactor;
+      speedy = -speedfactor;
   }
 
   //collision
@@ -61,9 +59,10 @@ function draw() {
      y = random (height);
    }
   
-if (debug){
-  textSize (30);
-  text("score: " + score, 50, 775)
+    if (debug){
+       textSize (30);
+       fill(255);
+       text("score: " + score, 50, 775)
  }
   
 }
