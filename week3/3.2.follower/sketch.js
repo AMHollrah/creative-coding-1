@@ -8,7 +8,7 @@ let y = 0;
 
 
 function preload() {
-  rose = img = loadImage('https://amhollrah.github.io/creative-coding-1/week3/3.2.follower/Seattle%20Rose-PhotoRoom.png');
+  rose = img = loadImage('https://amhollrah.github.io/creative-coding-1/week3/3.2.follower/Rose.jpg');
   
 
 function setup() {
@@ -16,7 +16,7 @@ function setup() {
 }
 
 function draw() {
-  background(100, 0, 200);
+  background(125, 17, 75);
   image(rose, mouseX, mouseY, 100, 160);
   
   // Move x and y

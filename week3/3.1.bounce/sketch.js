@@ -7,7 +7,7 @@ let xspeed = 2.5;
 let yspeed = -2;
 
 function preload() {
-  rose = img = loadImage('');
+  rose = img = loadImage('https://amhollrah.github.io/creative-coding-1/week2/pixels/SeattleRose.jpg');
 }
 
 function setup() {
