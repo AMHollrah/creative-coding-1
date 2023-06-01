@@ -1,4 +1,4 @@
-let NightSpace;
+let rose;
 
 let speedfactor = 3;
 let xspeed = speedfactor;
@@ -8,11 +8,11 @@ let y = 0;
 
 
 function preload() {
-  rose = img = loadImage('https://amhollrah.github.io/creative-coding-1/week3/3.2.follower/Corgi.png');
+  rose = img = loadImage('https://amhollrah.github.io/creative-coding-1/week3/3.2.follower/Rose.png');
 }
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(600, 480);
 }
 
 function draw() {
