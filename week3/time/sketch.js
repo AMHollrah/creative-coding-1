@@ -17,7 +17,7 @@ function setup() {
 }
 
 function draw() {
-  background(SunflowerSky);
+  //background(SunflowerSky);
     //image(Corgi, mouseX-50, mouseY-80, 100, 160);
 
 
