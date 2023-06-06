@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!--
+The present variation is an adaptation of Stochastic Texts by Anna Hollrah 
+Link to Orginial Work:https://nickm.com/memslam/stochastic_texts.html
+
+Stochastic Texts reimplementation
+copyright (c) 2014 Nick Montfort <nickm@nickm.com>
+based on a 1959 program (Stochastische Texte) by Theo Lutz
+the text is a translation of Lutz's German text by Helen MacCormack
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
+IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Updated 28 August 2019 to add a link to 1959 teleprinter output.
+-->
+    <style type="text/css">
+        /* <![CDATA[ */
+        body {
+            background: #074d0d;
+            color: #9ae279;
+            margin: 0 0 0 18pt;
+            font-family: Tahoma;
+            font-size: 16pt;
+        }
+
+        a {
+            color: #117;
+            text-decoration: none;
+        }
+
+        #main {
+            padding-top: 18px;
+            width: 70%;
+        }
+
+        #main div {  
+            padding-bottom: 9px;
+        }
+
+        #info {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            height: 100%;
+            width: 25%;
+            color: #333;
+            background: #999;
+            margin-left: 6px;
+            border-left: thin #000 solid;
+            border-bottom: thin #000 solid;
+            padding: 9px;
+            font-size: 80%
+        }
+
+        /* ]]> */
+    </style>
+    <script type="text/javascript">
+
+        var t = 0,
+            subjects = ['Farm', 'Earth', 'Plant', 'Water', 'Weeding', 'Tree',
+                'Garden', 'Vegetable', 'Fruit', 'Herb', 'Flower', 'Nutrition', 'Cultivate',
+                'Harvest', 'Food', 'Season'],
+            predicates = ['Growing', 'Round', 'Green', 'Life', 'Hard', 'Blooming', 
+                'Pentiful', 'Flavorful', 'Sweet', 'Healing', 'Fragrant', 'Essential',
+                'Happiness', 'Bountiful', 'Delicious', 'Changing'],
+            conjunctions = [' and ', ' or ', ' therefore ', '. ', '. ', '. ', '. ', '. '],
+            operators = ['A', 'Every', 'Each', 'Not Every'];
+        function rand_range(maximum) {
+            "use strict";
+            return Math.floor(Math.random() * (maximum + 1));
+        }
+        function choose(array) {
+            "use strict";
+            return array[rand_range(array.length - 1)];
+        }
+        function phrase() {
+            "use strict";
+            var text = choose(operators) + ' ' + choose(subjects);
+            if (text === 'A EYE') {
+                text = 'AN EYE';
+            }
+            return text + ' is ';
+        }
+        function litany() {
+            "use strict";
+            var last, text, main = document.getElementById('main');
+            if (25 > t) {
+                t += 1;
+            } else {
+                main.removeChild(document.getElementById('main').firstChild);
+            }
+            last = document.createElement('div');
+            text = phrase() + choose(predicates) + choose(conjunctions);
+            text = text + phrase() + choose(predicates) + '.';
+            last.innerHTML = text;
+            main.appendChild(last);
+        }
+        function produce_litany() {
+            "use strict";
+            litany();
+            setInterval(litany, 2000);
+        }
+
+    </script>
+    <title>Stochastic Texts (Reimplementation)</title>
+</head>
+
+<body onload="produce_litany();">
+    <div id="info">
+        <h2>Stochastic Texts</h2>
+        <h3>Theo Lutz</h3>
+        1959<br />
+        Zuse Z22, <a href="http://iasl.uni-muenchen.de/links/GCA_ill32.jpg">teleprinter</a><br />
+        ALGOL 58<br />
+        <br />
+        Translated by<br />
+        Helen MacCormack<br />
+        <br />
+        Reimplemented by<br />
+        <a href="http://nickm.com">Nick Montfort</a><br />
+        for <a href="http://nickm.com/memslam/">Memory Slam</a><br />
+        Also: a <a href="stochastic_texts.py">Python 2/3</a> version<br />
+        <br />
+        This poem is Anna Hollrah's adaptation of Stochastic Texts by Nick Monfort.<br />
+        <br /> 
+        I used wording related to planting, cultivating, and growing things on a farm 
+        or in a garden. Using the randomness of the Stochastic Pattern helped 
+        to create some very unique sentances about gardening that are inspiring and 
+        motivational to plant and grow our own food. There are some of the sentances 
+        that do make you thinking is that true - can you find them? 
+    </div>
+    <div id="main"></div>
+</body>
+
+</html>
