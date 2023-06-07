@@ -14,19 +14,18 @@ let grammar = tracery.createGrammar({
 });
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(800, 1000);
   frameRate(.25);
 }
 
 function draw() {
-  background(220);
+  background(144, 220, 144);
+  textFont("Tahoma");
+  textSize(20);
+  for (let i = 0; i < 8; i++) {
   poem = grammar.flatten("#origin#");
-  textFont("Impact");
-  textSize(30);
-  text(poem,50,150);
-
-  for (let i = 0; i < poem.length; i++) {
-    //fill(128+(i*10));
-    text(poem[i], 50, 50);
+  text(poem, 50, 120) 
+ 
   }
+
 }
