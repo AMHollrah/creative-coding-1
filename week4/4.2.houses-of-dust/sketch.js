@@ -1,7 +1,7 @@
 let poem = "";
 
 let grammar = tracery.createGrammar({
-"origin":["A HOUSE OF #material#\n#place#\nUSING #light_source#\nINHABITED BY #inhabitants#"],
+"origin":["A HOUSE OF #material#\n    #place#\n         USING #light_source#\n              INHABITED BY #inhabitants#"],
 
 "material":["SAND","DUST","LEAVES","PAPER","TIN","ROOTS","BRICK","STONE","DISCARDED CLOTHING","GLASS","STEEL","PLASTIC","MUD","BROKEN DISHES","WOOD","STRAW","WEEDS"],
 
@@ -14,17 +14,17 @@ let grammar = tracery.createGrammar({
 });
 
 function setup() {
-  createCanvas(800, 1000);
+  createCanvas(900, 1000);
   frameRate(.25);
 }
 
 function draw() {
   background(144, 220, 144);
-  textFont("Tahoma");
+  textFont("Courier New");
   textSize(20);
   for (let i = 0; i < 8; i++) {
   poem = grammar.flatten("#origin#");
-  text(poem, 50, 120) 
+  text(poem, 20, 50+i*120) 
  
   }
 
