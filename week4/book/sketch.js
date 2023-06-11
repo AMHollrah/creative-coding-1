@@ -99,7 +99,7 @@ let grammar = tracery.createGrammar({
       do {
         content.child(createElement("p",grammar.flatten("#paragraph#")));
         p++;
-      }while (p < random(40,130));
+      }while (p < random(50000));
       c++;
     }while (c < 55);
    
