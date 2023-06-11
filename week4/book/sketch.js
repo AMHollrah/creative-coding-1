@@ -22,7 +22,7 @@ zw
 // be relatively self-explanatory. The "loop" items near the 
 // end uses pseudo-recursion to generate lots of content.
 let grammar = tracery.createGrammar({
-    bookTitle : "All the #color.capitalize# #animal.s.capitalize# and #adj.capitalize# #animal.s.capitalize# in the #mood# ocean.",
+    bookTitle : "All the #color# #animal.s.capitalize# and #adj# #animal.s.capitalize# in the #mood# Ocean.",
     chapterTitle : ["#number.capitalize# #color.capitalize# #animal.s.capitalize#"],
     sentence : "The #color# #animal# #verb# to the #adj# #animal# in the #mood# ocean.",
     number : ["two",
