@@ -1,34 +1,50 @@
-let rose;
-
-let x = 100;
-let y = 100;
-
-let xspeed = 2.5;
-let yspeed = -2;
-
-function preload() {
-  rose = img = loadImage('https://amhollrah.github.io/creative-coding-1/week2/pixels/SeattleRose.jpg');
-}
+//reference class: https://happycoding.io/tutorials/processing/creating-classes
+let circles = []
 
 function setup() {
   createCanvas(600, 500);
+
+//how many circles  
+  for(let i = 0; i < 20; i++) {
+  circles[i] = new Circle(random(width), random(height), random(-2, 2), random(-5, 5));
+  } 
 }
 
 function draw() {
-  background(192, 38, 84);
-  image(rose, x, y, 160, 190);
+  background(255);
+//  fill(255);
+  stroke(0);
   
-  
-  // Image movement for edge
-  if (x < 0 || x > width - 160) {
-    xspeed = -xspeed;    
+//move and draw
+  for (let i = 0; i < circles.length; i++){
+    circles[i].move();
+    circles[i].display();
+  }
+}
+//Constructors
+class Circle {
+  constructor(x, y, xSpeed, ySpeed) {
+    this.x = x;
+    this.y = y;
+    this.xSpeed = xSpeed;
+    this.ySpeed = ySpeed;
+    fill(random(255), random(255), random(255));
+  }
+//movement
+  move() {
+    this.x += this.xSpeed;
+    if (this.x < 0 || this.x > width) {
+      this.xSpeed *= -1;
+    }
+
+    this.y += this.ySpeed;
+    if (this.y < 0 || this.y > height) {
+      this.ySpeed *= -1;
+    }
+  }
+//draw circle
+  display() {
+    circle(this.x, this.y, 50);
   }
 
-  if (y < 0 || y > height - 190) {
-    yspeed = -yspeed;    
-  }
-
-    x = x + xspeed;
-    y = y + yspeed;
-  
 }
