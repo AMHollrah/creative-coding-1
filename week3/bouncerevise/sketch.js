@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(120,35);
 //  fill(255);
   stroke(0);
   
