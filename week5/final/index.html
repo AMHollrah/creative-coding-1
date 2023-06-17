@@ -7,16 +7,61 @@
 
 
     <title>Final Project</title> 
+    <!--
+        Artist Statement by Anna Hollrah
+            As I was looking through the final project ideas – I was a little intimidated by the examples as they
+            seemed way beyond what we had learned in the past 4 weeks. I researched each of them, but I kept coming 
+            back to the Generative Landscape ideas, so I delved a little further into researching these kinds of designs 
+            and what had been created. I came across Let It Snow with Perlin Noise in p5.js
+            https://www.javascript.christmas/2020/16 and got a little inspiration and after reading through 
+            the whole article, I figured I could probably try and create some type of landscape. I came up with an 
+            underwater scene in my mind that I could add some freepik underwater animals too for the images, but 
+            that isn’t quite what happened. 
 
+            I started watching the Perlin Noise videos from The Coding Trains series and begin playing around with the code 
+            and created a looping one line of noise, but I couldn’t figure out how to create another line and keep the 
+            loop running. After reaching out to Professor Whalen for help, he was able to figure out that I just need to 
+            copy my first line and add a 1 to all the x and y coordinates. I was then able to create line 3 and 4 by 
+            just rewriting the same code and changing the numbers on x and y along with adding more height. 
+
+            To add color from the top of the noise line to the bottom, I had to change the vertex shape to a 
+            line shape and added two more coordinates to fill in the color all the way to the bottom of canvas.
+            As I was doing this, I realized, this was looking more like a mountain landscape scene then an underwater 
+            scene, so I switched gears with my colors and background. I created two layers of line and shaded them in 
+            differnt greens for the forest with several layers of blues behind the greens to look like the Blue 
+            Ridge Mountains.  I added a circle for a sun and then added in code to move it on the y axis. 
+            
+            I was really happy with how everything turned out, but I was struggling a little bit with my background. 
+            I researching how to do a gradient sky in p5js to see if that would complete the landscape 
+            when I came across a code by skgmmt in the p5js editor (link is in the sketch.js code) that moved 
+            the sun and moon on the y axis along with changing the background as the moon and sun went through 
+            the sky. I made some changes to the code and added it my background layer. I did slow it down quite 
+            a bit, but it seems more life like and not a fast moving motion. I also feel like the slow motion, 
+            creates an angle visual affect and the sun and moon seem to move through the sky at an angle from the 
+            mountains, but it just a very cool optical illusion. 
+
+    --> 
 
     <style type="text/css">
-      
+    body{
+        background-color:#222e1b;
+        }
+        main {
+            width: 100%;
+        }
+        canvas {
+            display:block;
+            margin: 0 auto;
+        }
     </style>
 
 </head>
 <body>
     <main>
     </main>
-    <script src="sketch.js"></script>
+    <script src="sketch.js">
+       
+    </script>
+    
 </body>
 </html> 
