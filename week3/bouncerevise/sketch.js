@@ -1,4 +1,4 @@
-//reference class: https://happycoding.io/tutorials/processing/creating-classes
+
 let circles = []
 
 function setup() {
